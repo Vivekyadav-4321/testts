@@ -1,5 +1,5 @@
 {
-  "name": "Vas WebWorks Backend",
+  "name": "vas",
   "version": "1.0.0",
   "description": "Backend for Vas WebWorks",
   "main": "server.js",
