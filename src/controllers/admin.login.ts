@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken")
 export async function adminLoginController(req: Request, res: Response) {
 
     try {
-        res.send("sent 12")
+        res.send("sent this is mew test")
         const admin = await adminCollection.findOne({ email: req.body.email, password: req.body.password }, { email: 1, password: 1 })
         if (!admin) {
             return res.status(404).json({ message: responseMessages.ADMIN_NOT_FOUND })
