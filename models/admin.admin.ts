@@ -1,5 +1,6 @@
-const mongoose = require("mongoose")
+import mongoose  from "mongoose"
 const adminUserSchema = new mongoose.Schema({
+
     firstName: {
         type: String,
         required: true

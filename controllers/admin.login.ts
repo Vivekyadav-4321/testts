@@ -1,12 +1,14 @@
 const router = require("express").Router()
+import { Request, Response } from "express"
 const appConfig = require("../constants/appConfig")
 const responseMessages = require("../constants/messages")
 const { adminCollection } = require('../models/zindex')
 const jwt = require("jsonwebtoken")
 
-router.get("/login", async (req, res) => {
+export async function adminLoginController(req: Request, res: Response) {
 
     try {
+        res.send("sent 12")
         const admin = await adminCollection.findOne({ email: req.body.email, password: req.body.password }, { email: 1, password: 1 })
         if (!admin) {
             return res.status(404).json({ message: responseMessages.ADMIN_NOT_FOUND })
@@ -19,6 +21,4 @@ router.get("/login", async (req, res) => {
         console.log("ERROR: " + __dirname);
         console.log(err);
     }
-})
-
-module.exports = router
+}

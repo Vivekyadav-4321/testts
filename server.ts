@@ -1,7 +1,8 @@
+import { adminRouter } from "./routes/admin.routes"
+
 const express = require('express')
 const app = express()
 const PORT = 3000 || process.env.PORT
-const adminRouter = require("./controllers/admin.login")
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
 
